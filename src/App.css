@@ -1,0 +1,70 @@
+/*Estilos del componente HEADER*/
+.header{
+  font-size: 40px;
+  background: #FF3300   ;
+  text-align: center;
+}
+.header img{
+  border-radius: 55%;
+  margin: 20px;
+  box-shadow: 10px 7px 12px  #FF6633 ;
+  width: 198px;
+}
+.header h1{
+  margin:0;
+  padding: 0;
+  text-shadow: 10px 7px 15px #FF6633     ;
+}
+/******************************************************************************/
+
+/*Estilos del componente RestaurantData*/
+.data{
+  margin: 30px 60px;
+}
+.buttonRating{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.buttonAll{
+  font-size: 40px;
+}
+.buttonRating button{
+  margin: 20px;
+  color: #FF3300;
+  padding: 5px;
+  border: 5px solid black;
+  border-radius: 30px;
+}
+.buttonRating button i{
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+
+
+/*Container*/
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px;
+  grid-gap: 2em;
+}
+.dataContainer{
+  border: 3px solid #FF3300;
+  padding: 8px;
+  box-shadow: 10px 5px 6px;
+  border-radius: 5px;
+}
+.tittle{
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+}
+.facebook{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5em;
+  padding: 0 50px;
+}
+.like{
+  border: 1px solid;
+}
+/******************************************************************************/
