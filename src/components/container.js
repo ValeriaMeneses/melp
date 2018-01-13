@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FacebookProvider, { Share, Like } from 'react-facebook';
+import FacebookProvider, { Share } from 'react-facebook';
+import ReactFBLike from 'react-fb-like';
 
 import ContainerMaps from './containerMaps.js'
 
@@ -19,9 +20,7 @@ export default class Container extends Component{
             </Share>
           </FacebookProvider>
           <div className="like">
-            <FacebookProvider appId="123456789">
-              <Like href="http://www.facebook.com" colorScheme="dark" showFaces share />
-            </FacebookProvider>
+            <ReactFBLike language="ko_KR" appId="717589285046812" version="v2.8" />
           </div>
         </div>
         <div className="contact">
