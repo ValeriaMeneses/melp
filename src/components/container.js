@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import FacebookProvider, { Share, Like } from 'react-facebook';
 
+import ContainerMaps from './containerMaps.js'
+
 export default class Container extends Component{
   render(){
     let data = this.props.data
-    console.log(data.address.location);
     return(
       <div key = {data.id} className="dataContainer">
         <div className="tittle">
@@ -18,7 +19,9 @@ export default class Container extends Component{
             </Share>
           </FacebookProvider>
           <div className="like">
-            <p>Like+</p>
+            <FacebookProvider appId="123456789">
+              <Like href="http://www.facebook.com" colorScheme="dark" showFaces share />
+            </FacebookProvider>
           </div>
         </div>
         <div className="contact">
@@ -29,7 +32,7 @@ export default class Container extends Component{
         <div className = "address">
           <p><b>Address: </b> <spam>{data.address.street}, {data.address.city}, {data.address.state}</spam></p>
         </div>
-        <div><p>Maps</p></div>
+        <ContainerMaps address={data.address.location} />
       </div>
     )
   }

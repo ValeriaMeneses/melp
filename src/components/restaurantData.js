@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { data_melp } from '../data/data_melp.js';
 
 import Container from './container.js';
+import MapWithAMarkerWithLabel from './mapMarker.js'
+
 
 export default class RestaurantData extends Component{
   constructor(){
@@ -19,7 +21,6 @@ export default class RestaurantData extends Component{
   }
 
   render(){
-    console.log("esto es rating", this.state.rating);
     let data_filter = data_melp.filter(element => {
       if (this.state.rating === element.rating) return true
       if (this.state.rating === 5) return true
@@ -29,6 +30,12 @@ export default class RestaurantData extends Component{
     })
     return(
       <div className="data">
+        <MapWithAMarkerWithLabel
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfDW3bRoUOtE_mtU6yV2-4Re9rRo3AjN4&v=3.exp&libraries=geometry,drawing,places"
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `300px` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
         <div className="buttonRating">
           <button className="buttonAll" onClick={ ()=>{ this._handleClick(5) } }>All</button>
           <button onClick={ ()=>{ this._handleClick(4) } }>
